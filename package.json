@@ -1,0 +1,49 @@
+{
+  "name": "connect-jwks",
+  "version": "0.0.1",
+  "description": "JSON Web Key Set (JWK Set) middleware for Connect.",
+  "keywords": [
+    "connect",
+    "express",
+    "jwk",
+    "jwks",
+    "jwt",
+    "jws",
+    "jwe",
+    "pki",
+    "pkix",
+    "x509",
+    "pem"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaredhanson/connect-jwks.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/connect-jwks/issues"
+  },
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+  }
+}
