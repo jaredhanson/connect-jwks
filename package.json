@@ -35,6 +35,8 @@
   ],
   "main": "./lib",
   "dependencies": {
+    "node-forge": "0.2.x",
+    "base64url": "0.0.x"
   },
   "devDependencies": {
     "mocha": "1.x.x",
