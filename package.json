@@ -16,6 +16,11 @@
     "x509",
     "pem"
   ],
+  "author": {
+    "name": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/jaredhanson/connect-jwks.git"
@@ -23,15 +28,11 @@
   "bugs": {
     "url": "http://github.com/jaredhanson/connect-jwks/issues"
   },
-  "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
-  },
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
+      "url": "http://opensource.org/licenses/MIT"
     }
   ],
   "main": "./lib",
