@@ -41,8 +41,9 @@
     "base64url": "0.0.x"
   },
   "devDependencies": {
-    "mocha": "1.x.x",
-    "chai": "1.x.x"
+    "make-node": "0.3.x",
+    "mocha": "2.x.x",
+    "chai": "3.x.x"
   },
   "engines": {
     "node": ">= 0.4.0"
