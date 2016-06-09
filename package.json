@@ -37,13 +37,14 @@
   ],
   "main": "./lib",
   "dependencies": {
-    "node-forge": "0.2.x",
-    "base64url": "0.0.x"
+    "base64url": "^1.0.6",
+    "node-forge": "0.6.x"
   },
   "devDependencies": {
     "make-node": "0.3.x",
     "mocha": "2.x.x",
-    "chai": "3.x.x"
+    "chai": "3.x.x",
+    "chai-connect-middleware": "^0.3.1"
   },
   "engines": {
     "node": ">= 0.4.0"

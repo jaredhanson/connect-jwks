@@ -6,8 +6,8 @@ var expect = require('chai').expect;
 
 describe('connect-jwks', function() {
   
-  it('should export hello world', function() {
-    expect(pkg.hello).to.equal('world');
+  it('should export middleware', function() {
+    expect(pkg).to.be.a('function');
   });
   
 });
