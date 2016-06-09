@@ -38,6 +38,7 @@
   "main": "./lib",
   "dependencies": {
     "base64url": "^1.0.6",
+    "jsrsasign": "^5.0.12",
     "node-forge": "0.6.x"
   },
   "devDependencies": {
