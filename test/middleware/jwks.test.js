@@ -4,6 +4,36 @@ var chai = require('chai')
 
 describe('jwks', function() {
   
+  describe('serving public key from file system containing certificate with RSA key', function() {
+    var response, json;
+
+    before(function(done) {
+      chai.connect.use(jwks('test/fixtures/cert-rsa/public', { ext: '.pem' }))
+        .end(function(res) {
+          response = res;
+          json = JSON.parse(res.body);
+          done();
+        })
+        .dispatch();
+    });
+    
+    it('should have one key', function() {
+      expect(json.keys).to.be.an('array');
+      expect(json.keys.length).to.equal(1);
+    });
+    
+    it('key should be formatted correctly', function() {
+      var key = json.keys[0];
+      
+      expect(Object.keys(key)).to.have.length(4);
+      expect(key.kty).to.equal('RSA');
+      expect(key.kid).to.equal('A');
+      expect(key.n).to.equal('AM7n3ddKIffNJdMkBJ6z3MWdC99RKKejhaSIkCqq9UWBx4N2Tnz7YPqz9pXJIYdbixboIF1Xc3zekxmWCilkJ2_vZd-oYIQAEIZZk6TZ4sk3i2coPV7UfAx6lHIp2l-K4qL6-VdjHEh41zq1fLkmXdZf8ANB4aiK8CKlkIvePGn8YSzSf4YfChG133vVR5fPyPdA_UdW1CDbT0zlO0_S4LxagsP2hmvTf11vD--fl88m5UcVXrz1gIEed5wZA35XrhlWC3dAIzFXJGk1akjBUFOx4msegwnVPrKclr_PInRO74tGaLN7V5l-AEZJfpObjqBnevQJ09jVGqceUQfdcGE');
+      expect(key.e).to.equal('AQAB');
+    });
+  });
+  
+  
   describe('serving public key from file system', function() {
     var response, json;
 
