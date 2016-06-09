@@ -33,12 +33,11 @@ describe('jwks', function() {
     });
   });
   
-  
-  describe('serving public key from file system', function() {
+  describe('serving public key from file system containing RSA key', function() {
     var response, json;
 
     before(function(done) {
-      chai.connect.use(jwks('test/fixtures/rsa-pub-priv/public'))
+      chai.connect.use(jwks('test/fixtures/key-rsa/public'))
         .end(function(res) {
           response = res;
           json = JSON.parse(res.body);
@@ -54,7 +53,6 @@ describe('jwks', function() {
     
     it('key should be formatted correctly', function() {
       var key = json.keys[0];
-      console.log(key);
       
       expect(Object.keys(key)).to.have.length(4);
       expect(key.kty).to.equal('RSA');
