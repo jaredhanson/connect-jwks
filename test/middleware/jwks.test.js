@@ -59,7 +59,7 @@ describe('jwks', function() {
       expect(Object.keys(key)).to.have.length(4);
       expect(key.kty).to.equal('RSA');
       expect(key.kid).to.equal('abc');
-      expect(key.n).to.equal('AJtsP4ZkqXV8JiQTW8s8pb8-_g0c8s_QBqF9gI7clJYLOJxDWKyPUy2xTufZVwMw11TSFFOXKDe5LREt2bzhpOl-pT_mpFOm-jT9MmzL_rUUJBbWOWpIex1NQLqHR-_mfARdSM8JkF__Y9WVprWigLyIV_xKVbWn8l0qHmRmGf9xyfSQ6de_EEHDwP60Esk1PSm31V6cBfTg36x7btBG1uMF6BGZuPr-lzCB_QrogJSyEZIsA-mLWKeJAPISx4KHY3oRXUZ-mh63BeG1NTy6hU6C7Hwg1Wzdw0PqWxwFNGZZ4_xY9fEdDryJ4DNvm3mBuHUib417sEkETOMx-ILoB2c');
+      expect(key.n).to.equal('ALkFbkWQb7EKIcxdLP94IyLu08WDzAqJD_Xg5YiHdW8edjK1qeP8v-c3gNaP6OmC4DMWcpApf5Qd4jw6JK5oSADp4Jhng-yV5bziDAes8jU_Y2SbBvitxe6WEp4z1Qn66vIqvyKbRkV0VuRGGs4IDoiaDwahloG0X3Iulg4flOCbe3cu-KmT0r77F53DrxZF2TN4xeNTly_9-hdiXY7nu-mVYGVI1u72mE3uVF3gEd0qncj6_oAJQQe87CwC01ypeSEDtIiRLV5Zo2AKiwaYNBfaPvBRgz0c3vUuZX42x1UvGBrt_nwz8a6ckyxbvrKHrD1GQD174FBOPEpFRXXVSH8');
       expect(key.e).to.equal('AQAB');
     });
   });

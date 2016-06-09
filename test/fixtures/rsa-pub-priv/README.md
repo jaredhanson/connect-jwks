@@ -1,6 +1,5 @@
-$ openssl genrsa -out private.pem 2048
-$ openssl rsa -in private.pem -pubout -out public.pem
+The keying material in this directory consists of a PEM encoded private key and
+a PEM encoded public key, generated with the following command:
 
-$ openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.pem -out certificate.crt
-
-$ 
+$ openssl genrsa -out abc.key 2048
+$ openssl rsa -in abc.key -pubout -out public/abc.key
